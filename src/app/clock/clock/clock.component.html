@@ -1,0 +1,28 @@
+
+<div class="clock-wrapper black-border">
+    <div class="clock-analog">
+        
+        <div class="hand hour-hand"
+        [ngStyle]="{'transform':'rotate('+ hourHandPosition + 'deg)'}"
+            ></div>
+        <div class="hand minute-hand"
+        [ngStyle]="{'transform':'rotate('+ minuteHandPosition + 'deg)'}"
+            ></div>
+        <div class="hand second-hand"
+            [ngStyle]="{'transform':'rotate('+ secondHandPosition + 'deg)'}"
+            ></div>
+    </div>
+    <div class="clock-digital">
+        <!-- <span class="date year">{{timeObject.year}}</span>
+        <span class="date seperator">-</span>
+        <span class="date month">{{timeObject.month}}</span>
+        <span class="date seperator">-</span>
+        <span class="date day">{{timeObject.day}}</span> -->
+        
+        <span class="date hour">{{timeObject.hour}}</span>
+        <span class="date seperator" [ngClass]=" conditionalStyleClass === 'ry'?'ry':'rn' ">:</span> 
+        <span class="date minute">{{timeObject.minute}}</span>
+        <span class="date seperator" [ngClass]=" conditionalStyleClass === 'ry'?'ry':'rn' ">:</span> 
+        <span class="date second">{{timeObject.second}}</span>
+    </div>
+</div>
